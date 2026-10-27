@@ -1,0 +1,10 @@
+# Wave 1: applied only after wave 0 has settled.
+apiVersion: demo.io/v1
+kind: Widget
+metadata:
+  name: my-widget
+  namespace: default
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  size: large
